@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<script src="js/jquery-1.12.0.js"></script>
+		<script src="js/goods.js"></script>
+		<link type="text/css" href="css/goods.css" rel="stylesheet"/>
+		<script>
+		$(document).ready(function(){
+			
+			$.getJSON("js/indexJson/nav.json",function(shuju){
+					$(".nav_left>a").html(shuju.left_Top);
+					//console.info(shuju.left_Button[1].list[0].data[0]);
+					//将数据导入到菜单里面-----
+					for (var i=0;i<4;i++) {
+						//箱包
+						$.each(shuju.left_Button[1].list[i].data, function(index,val) {
+						var Oli="<li style='text-align:left;margin:5px 0'><a href='#'>"+val.tag+"</a><li>"
+						$("#left1>.left1_"+i).append(Oli);
+						});
+						//配饰
+						$.each(shuju.left_Button[2].list[i].data, function(index,val) {
+						var Oli="<li style='text-align:left;margin:5px 0'><a href='#'>"+val.tag+"</a><li>"
+						$("#left2>.left2_"+i).append(Oli);
+						});
+						//服装
+						$.each(shuju.left_Button[3].list[i].data, function(index,val) {
+						var Oli="<li style='text-align:left;margin:5px 0'><a href='#'>"+val.tag+"</a><li>"
+						$("#left3>.left3_"+i).append(Oli);
+						});
+						//鞋子
+						$.each(shuju.left_Button[4].list[i].data, function(index,val) {
+						var Oli="<li style='text-align:left;margin:5px 0'><a href='#'>"+val.tag+"</a><li>"
+						$("#left4>.left4_"+i).append(Oli);
+						});
+					}
+				})
+			
+			//鼠标滑动的二级菜单
+			$('.navNavLeft li').hover(function(){
+				$(this).find("div").show();
+			},function(){
+				$(this).find("div").hide();
+			})
+			
+			//当搜索栏的得到和失去焦点时的时间
+			
+			$("#searchShopping").on("focus",function(){
+				$(this).val("");
+			})
+			$("#searchShopping").on("blur",function(){
+				$(this).val("MK包");
+			})
+			
+			//js设置bodyLeft
+			$("#up").on("click",function(){
+				if (this.className=="up") {
+					$(this).attr({class:"down"})
+				}else{
+					$(this).attr({class:"up"})
+				}
+				$(this).siblings().eq(0).stop().slideToggle();
+			})
+			$("#up2").on("click",function(){
+				if (this.className=="up") {
+					$(this).attr({class:"down"})
+				}else{
+					$(this).attr({class:"up"})
+				}
+				$(this).siblings().eq(0).stop().slideToggle();
+			})
+			
+		$("#moreGoodsName").on("click",function(){
+			var nowHeight=$(".list2").height()
+			console.info(nowHeight)
+			//这里要注意多次运行之后，nowheight可能会是82.09090909
+			if (parseInt(nowHeight)==82||parseInt(nowHeight)==81) {
+				$(".nav_goods_name").css({
+				height:"120px",
+				overflow:"auto"
+			})
+			}else{
+				$(".nav_goods_name").css({
+				height:"82px",
+				overflow:"hidden"
+			})
+			}
+		})
+		//有侧边栏的效果
+		$(".sidebar li").hover(function(){
+			
+			$(this).find("div").show().stop().animate({
+			left:"-110px"})
+		},function(){
+			$(this).find("div").stop().animate({
+			left:"0"},function(){
+				$(this).hide();
+			})
+		})
+		
+		$("#sidebar7").on("click",function(){
+			$(document).scrollTop(0);
+		})
+			
+			
+			
+		})
+		
+		</script>
+	</head>
+	<body>
+		<div class="ewm">
+			<a href=""><img src="img/index/ewm.png"/></a>
+		</div>
+		<!--====================侧边栏======================-->
+		<div class="sidebar">
+			<div class="fuck"></div>
+			<ul class="sidebar_ul">
+				<li>
+					<a id="sidebar1"></a>
+					<div class="whichNeed">点我</div>
+				</li>
+				<li>
+					<a id="sidebar2"></a>
+					<div class="whichNeed">没错</div>
+				</li>
+				<li>
+					<a id="sidebar3"></a>
+					<div class="whichNeed">点我！</div>
+				</li>
+				<li>
+					<a id="sidebar4"></a>
+					<div class="whichNeed">点我嘛~</div>
+				</li>
+				<li>
+					<a id="sidebar5"></a>
+					<div class="whichNeed">就是我~</div>
+				</li>
+				<li>
+					<a id="sidebar6"></a>
+					<div class="whichNeed">哇哦~~~</div>
+				</li>
+				<li id="sidebar7"></li>
+				
+			</ul>
+		</div>
+		<!--------------top------------->
+		<div class="outerTop">
+			<div class="top"><img src="img/index/top.jpg"/></div>
+		</div>
+		<!------------------nav--------------->
+		<div class="outerNav">
+			<div class="nav">
+				<div class="nav_left">
+					<a class="youhui" href="#"></a>
+					<ul class="navNavLeft">
+						<li><a href="#">全球免税店</a>
+						</li>
+						<li id="xiangbao">
+							<a href="#">箱包</a>
+							<div id="left1">
+								<ul class="left1_0">
+									<li class="header">女士箱包</li>
+								</ul>
+								<ul class="left1_1">
+									<li class="header">男士箱包</li>
+								</ul>
+								<ul class="left1_2">
+									<li class="header">热门品牌</li>
+								</ul>
+								<ul class="left1_3">
+									<li class="header">热门词</li>
+								</ul>
+								<img src="" />
+							</div>
+						</li>
+						<li id="peishi">
+							<a href="#">配饰</a>
+							<div id="left2">
+								<ul class="left2_0">
+									<li class="header">女士配饰</li>
+								</ul>
+								<ul class="left2_1">
+									<li class="header">男士配饰</li>
+								</ul>
+								<ul class="left2_2">
+									<li class="header">热门品牌</li>
+								</ul>
+								<ul class="left2_3">
+									<li class="header">热门词</li>
+								</ul>
+								<img src="" />
+							</div>
+							
+						</li>
+						<li id="cloths">
+							<a href="#">服装</a>
+							<div id="left3">
+								<ul class="left3_0">
+									<li class="header">女士配饰</li>
+								</ul>
+								<ul class="left3_1">
+									<li class="header">男士配饰</li>
+								</ul>
+								<ul class="left3_2">
+									<li class="header">热门品牌</li>
+								</ul>
+								<ul class="left3_3">
+									<li class="header">热门词</li>
+								</ul>
+								<img src="" />
+							</div>
+						</li>
+						<li id="shoots">
+							<a href="#">鞋靴</a>
+							<div id="left4">
+								<ul class="left4_0">
+									<li class="header">女士配饰</li>
+								</ul>
+								<ul class="left4_1">
+									<li class="header">男士配饰</li>
+								</ul>
+								<ul class="left4_2">
+									<li class="header">热门品牌</li>
+								</ul>
+								<ul class="left4_3">
+									<li class="header">热门词</li>
+								</ul>
+								<img src="" />
+							</div>
+							
+						</li>
+						<li><a href="#">新品</a></li>
+						
+					</ul>
+				</div>
+				<div class="nav_middle">
+					<a href="index.html"><span>珍品</span><p>股票代码835700</p>
+					</a>
+				</div>
+				<div class="nav_right">
+					<ul>
+						<li><a href="html/Login.html">登录</a><span>丨</span></li>
+						<li><a href="html/regsiter.html ">注册</a><span>丨</span></li>
+						<li id="shoppingCar"></li>
+						<li><a href="#">购物袋</a></li><span id="shoppingNum">0</span>
+						
+					</ul>
+					<div>
+						<input id="searchShopping" type="text" value="MK包" />
+						<input id="searchPic" type="button"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!----------------------body------------------->
+		<div class="body">
+			<div class="bodyName">箱包</div>
+			<div class="bodyMain">
+				<div class="bodyLeft">
+					<div id="drop" class="down_list">
+					     <h2 id="up" class="up">女士箱包</h2>
+						<ul>
+							    <li><a href="details.html">手提包</a></li>
+							    <li><a href="#">你包</a></li>
+							    <li><a href="#">我包</a></li>
+							    <li><a href="#">豆沙包</a></li>
+							    <li><a href="#">肉包</a></li>
+							    <li><a href="#">蛋黄包</a></li>
+							    <li><a href="#">蛋黄包</a></li>
+							    <li><a href="#">蛋黄包</a></li>
+							    <li><a href="#">蛋黄包</a></li>
+							    <li><a href="#">蛋黄包</a></li>
+						</ul>
+					</div>
+					<div id="drop2" class="down2_list">
+					    <h2 id="up2" class="up">男士箱包</h2>
+						<ul>
+							    <li><a href="#">手提包</a></li>
+							    <li><a href="#">你包</a></li>
+							    <li><a href="#">我包</a></li>
+							    <li><a href="#">豆沙包</a></li>
+							    <li><a href="#">肉包</a></li>
+							    <li><a href="#">人肉包</a></li>
+							    <li><a href="#">屎包</a></li>
+							    <li><a href="#">荷叶包</a></li>
+							    <li><a href="#">麻辣油包</a></li>
+							    <li><a href="#">蛋黄包</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="bodyRight">
+					<div class="bodyRight_Top">
+						<div class="list1"><span><a href="#">箱包</a>-共16310件相关商品</span></div>
+						<div class="list2">
+							<div class="nav_word">品牌</div>
+							<div class="nav_goods_name">
+								<ul class="list2_ul1">
+									<li></li>
+									<li><a href="http://www.zhen.com/c3/b15/">Coach/蔻驰</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+								</ul>
+								<ul class="list2_ul2">
+									<li><a href="http://www.zhen.com/c3/b3/">Moschino/莫斯奇诺</a></li>
+									<li><a href="http://www.zhen.com/c3/b16/">Burberry/巴宝莉</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									
+								</ul>
+								<ul class="list2_ul3">
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+								</ul>
+								<ul class="list2_ul4">
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									<li><a href="http://www.zhen.com/c3/b26/">Chanel/香奈儿</a></li>
+									
+								</ul>
+							</div>
+							<div id="more" class="nav_more"><a id="moreGoodsName">更多</a></div>
+						</div>
+						<div class="list3">
+							<div class="nav_word">颜色</div>
+							<div class="colorBox">
+								<ul>
+									<li><a href="#"></a></li>
+									<li><a href="#"></a></li>
+									<li><a href="#"></a></li>
+									<li><a href="#"></a></li>
+									<li><a href="#"></a></li>
+									<li><a href="#"></a></li>
+									<li><a href="#"></a></li>
+									<li><a href="#"></a></li>
+									<li><a href="#"></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="list4">
+							<div class="nav_word">性别</div>
+							<div class="sexBox">
+								<ul>
+									<li><a href="#">通用</a></li>
+									<li><a href="#">男</a></li>
+									<li><a href="#">女</a></li>
+				
+								</ul>
+							</div>
+						</div>
+						<div class="list5">
+							<div class="nav_word">价格</div>
+							<div class="priceBox">
+								<ul>
+									<li><a href="#">1000以下</a></li>
+									<li><a href="#">1000-2000</a></li>
+									<li><a href="#">2000-5000</a></li>
+									<li><a href="#">5000-10000</a></li>
+									<li><a href="#">10000以上</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="bodyRight_bottom">
+						<div class="bodyRight_bottom_top">
+							<input type="button" value="人气" name="hot" id="hot" />
+							<input type="button" value="最新" name="new" id="new" />
+							<input type="button" value="价格" name="price" id="price" />
+							<span>价格</span>
+							<input type="text" value="最低价" id="lowPrice"/>-<input id="heightPrice" type="text" value="最高价" />
+							<input type="checkbox" />促销
+							<input type="checkbox" />促销
+							<input type="checkbox" />促销
+							<span class="changePage"><a class="pageNumber">1</a>/255<a class="bodyRight_bottom_shoppingAfter"></a><a class="bodyRight_bottom_shoppingNext"></a></span>
+						</div>
+						<div class="bodyRight_bottom_shopping">
+							
+							
+						</div>
+						<div class="needPage">
+							<ul class="needNum">
+								<li>1</li>
+								<li>2</li>
+								<li>3</li>
+								<li>4</li>
+								<li>5</li>
+						
+								<li class="nextPage">下一页</li>
+							</ul>
+							<span>共272页</span>
+							<span>去<input class="userInput" type="text"/>页</span><input type="button"/ class="userSure" value="确定">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+				<!-------------------other--------------------->
+		<div class="outerOther">
+			<div class="footer">
+				<div class="footerLeft">
+					<div class="footerLeftTop">
+						<a class="link1" href="#"></a>
+						<a class="link2" href="#"></a>
+						<a class="link3" href="#"></a>
+					</div>
+					<ul class="footerLeftBotton">
+						<li>
+							<strong>新手指导</strong>
+							<a href="#">常见问题</a>
+							<a href="#">联系客服</a>
+							<a href="#">正品保障</a>
+							<a href="#">全球免税店</a>
+						</li>
+						<li>
+							<strong>新手指导</strong>
+							<a href="#">常见问题</a>
+							<a href="#">联系客服</a>
+							<a href="#">正品保障</a>
+							<a href="#">全球免税店</a>
+						</li>
+						<li>
+							<strong>支付方式</strong>
+							<a href="#">常见问题</a>
+							<a href="#">联系客服</a>
+							
+						
+						</li>
+						<li>
+							<strong>售后服务</strong>
+							<a href="#">常见问题</a>
+							<a href="#">联系客服</a>
+							
+						</li>
+						<li>
+							<strong>配送说明</strong>
+							<a href="#">常见问题</a>
+							<a href="#">联系客服</a>
+							<a href="#">正品保障</a>
+							<a href="#">全球免税店</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footerRight">
+					<div class="footerRightLeft">
+						<p class="jju1"><b>关注我们</b></p>
+						<div class="jju2">
+							<p style="font-size: 13px;"><a href="#">下载App</a></p>
+							<p><a href="#">首单满200立减100</a></p>
+						</div>
+						<div class="jju3">
+							<img src="img/index/zpg_wximg.jpg"/>
+						</div>
+						
+					</div>
+					<div class="footerRightRight">
+						<p class="ccu1"><b>联系我们</b></p>
+						<div class="ccu2">
+							<p><a href="#">在线客服</a></p>
+						</div>
+						<div class="ccu3">
+							<img src="img/index/zpg_time.jpg"/>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<!------------------------bottom-------------------->
+		<div class="outerBottom">
+			<div class="bottom">
+				<div><p><a href="#">企业客户</a><span>|</span>
+						<a href="#">关于我们</a><span>|</span>
+						<a href="#">联系我们</a><span>|</span>
+						<a href="#">人才招聘</a><span>|</span>
+						<a href="#">企业客户</a><span>|</span>
+						<a href="#">合作伙伴</a><span>|</span>	
+				</div>
+				<div><p>京ICP证110290号 | 京ICP备11014626号-5 | 京公网安备11010502025723号 | 食品流通许可证SP1101121310106363(1-1) | 出版物经营许可证 新出发京批字第直130121号</p></div>
+			
+		</div>
+		</div>
+	</body>
+</html>

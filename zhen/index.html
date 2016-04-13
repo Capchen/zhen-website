@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script src="js/jquery-1.12.0.js"></script>
+		<script>
+		$(document).ready(function(){
+			var len=$('.f_img>li').size();
+				var index=0;
+				show(0);
+				function show(a){              
+			        for(i=0;i<len;i++){  //把图片的效果设置和按钮相同
+			            $('.f_img').find('li').eq(i).addClass("scale");
+			            $('.f_img').find('li').eq(i).css({"z-index":3})
+			            
+			            $('.f_img').find('li').eq(a).removeClass("scale");
+			            $('.f_img').find('li').eq(a).css({"z-index":0})
+			        }
+			    }			
+			//自动轮播方法
+				function autoPlay(){
+			            play=setInterval(function(){
+						index++;
+			            index>=len&&(index=0);
+			            
+			            show(index);
+			        },3000)
+			    }
+			    autoPlay();
+			
+			$.getJSON("js/indexJson/nav.json",function(shuju){
+					$(".nav_left>a").html(shuju.left_Top);
+					//console.info(shuju.left_Button[1].list[0].data[0]);
+					//将数据导入到菜单里面-----
+					for (var i=0;i<4;i++) {
+						//箱包
+						$.each(shuju.left_Button[1].list[i].data, function(index,val) {
+						var Oli="<li style='text-align:left;margin:5px 0'><a href='#'>"+val.tag+"</a><li>"
+						$("#left1>.left1_"+i).append(Oli);
+						});
+						//配饰
+						$.each(shuju.left_Button[2].list[i].data, function(index,val) {
+						var Oli="<li style='text-align:left;margin:5px 0'><a href='#'>"+val.tag+"</a><li>"
+						$("#left2>.left2_"+i).append(Oli);
+						});
+						//服装
+						$.each(shuju.left_Button[3].list[i].data, function(index,val) {
+						var Oli="<li style='text-align:left;margin:5px 0'><a href='#'>"+val.tag+"</a><li>"
+						$("#left3>.left3_"+i).append(Oli);
+						});
+						//鞋子
+						$.each(shuju.left_Button[4].list[i].data, function(index,val) {
+						var Oli="<li style='text-align:left;margin:5px 0'><a href='#'>"+val.tag+"</a><li>"
+						$("#left4>.left4_"+i).append(Oli);
+						});
+					}
+				})
+				//获取第一排的logo
+				$.getJSON("js/indexJson/logo.json",function(data){
+				$.each(data.logoName, function(index,val) {
+					var msg="<li style='float:left;'><a href='#'><img src="+val.href+"/></a></li>"
+					$(".logo").append(msg)
+				});
+			})
+				//当滑动到第一排logo的时候后面两排会显示
+				$(".logo").one("mouseenter",function(){
+					$(".logoHide").slideToggle("slow");
+					for (var i=0;i<2;i++) {
+						$.getJSON("js/indexJson/logo.json",function(data){
+							$.each(data.logoName, function(index,val) {
+							var msg="<li style='float:left;'><a href='#'><img src="+val.href+"/></a></li>"
+							$(".logoHide").append(msg)
+									});
+					})
+					}
+				})
+			
+			//鼠标滑动的二级菜单
+			$('.navNavLeft li').hover(function(){
+				$(this).find("div").show();
+			},function(){
+				$(this).find("div").hide();
+			})
+			
+			//当搜索栏的得到和失去焦点时的时间
+			
+			$("#searchShopping").on("focus",function(){
+				$(this).val("");
+			})
+			$("#searchShopping").on("blur",function(){
+				$(this).val("MK包");
+			})
+			
+		})
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		<div class="ewm">
+			<a href=""><img src="img/index/ewm.png"/></a>
+		</div>
+		<!--------------top------------->
+		<div class="outerTop">
+			<div class="top"><img src="img/index/top.jpg"/></div>
+		</div>
+		<!------------------nav--------------->
+		<div class="outerNav">
+			<div class="nav">
+				<div class="nav_left">
+					<a class="youhui" href="active.html"></a>
+					<ul class="navNavLeft">
+						<li><a href="#">全球免税店</a>
+						</li>
+						<li id="xiangbao">
+							<a href="goods.html">箱包</a>
+							<div id="left1">
+								<ul class="left1_0">
+									<li class="header">女士箱包</li>
+								</ul>
+								<ul class="left1_1">
+									<li class="header">男士箱包</li>
+								</ul>
+								<ul class="left1_2">
+									<li class="header">热门品牌</li>
+								</ul>
+								<ul class="left1_3">
+									<li class="header">热门词</li>
+								</ul>
+								<img src="" />
+							</div>
+						</li>
+						<li id="peishi">
+							<a href="#">配饰</a>
+							<div id="left2">
+								<ul class="left2_0">
+									<li class="header">女士配饰</li>
+								</ul>
+								<ul class="left2_1">
+									<li class="header">男士配饰</li>
+								</ul>
+								<ul class="left2_2">
+									<li class="header">热门品牌</li>
+								</ul>
+								<ul class="left2_3">
+									<li class="header">热门词</li>
+								</ul>
+								<img src="" />
+							</div>
+							
+						</li>
+						<li id="cloths">
+							<a href="#">服装</a>
+							<div id="left3">
+								<ul class="left3_0">
+									<li class="header">女士配饰</li>
+								</ul>
+								<ul class="left3_1">
+									<li class="header">男士配饰</li>
+								</ul>
+								<ul class="left3_2">
+									<li class="header">热门品牌</li>
+								</ul>
+								<ul class="left3_3">
+									<li class="header">热门词</li>
+								</ul>
+								<img src="" />
+							</div>
+						</li>
+						<li id="shoots">
+							<a href="#">鞋靴</a>
+							<div id="left4">
+								<ul class="left4_0">
+									<li class="header">女士配饰</li>
+								</ul>
+								<ul class="left4_1">
+									<li class="header">男士配饰</li>
+								</ul>
+								<ul class="left4_2">
+									<li class="header">热门品牌</li>
+								</ul>
+								<ul class="left4_3">
+									<li class="header">热门词</li>
+								</ul>
+								<img src="" />
+							</div>
+							
+						</li>
+						<li><a href="#">新品</a></li>
+						
+					</ul>
+				</div>
+				<div class="nav_middle">
+					<a><span>珍品</span><p>股票代码835700</p>
+					</a>
+				</div>
+				<div class="nav_right">
+					<ul>
+						<li><a href="html/Login.html">登录</a><span>丨</span></li>
+						<li><a href="html/regsiter.html ">注册</a><span>丨</span></li>
+						<li id="shoppingCar"></li>
+						<li><a href="html/shoppingCar.html">购物袋</a></li><span id="shoppingNum">0</span>
+						
+					</ul>
+					<div>
+						<input id="searchShopping" type="text" value="MK包" />
+						<input id="searchPic" type="button"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!----------------------banner----------------------->
+		<div class="outerBanber">
+			<!--<div class="banner"><a href="#"><img src="img/index/banner.jpg"/></a></div>-->
+			<div id="playimages" class="focus_box">
+				<ul class="f_img">
+					<li style="z-index: 0; opacity: 1;">
+						<a style="background:url(img/index/banner.jpg) no-repeat center top;"></a>
+					</li>
+					<li class="" style="z-index: 0; opacity: 1;">
+						<a style="background:url(img/index/banner1.jpg) no-repeat center top;"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--------------------------logo----------------->
+		<ul class="logo">
+		</ul>
+		<ul class="logoHide">
+			
+		</ul>
+		<!-----------------------showPic----------------->
+		<div class="showPic">
+			<div class="showPicTop">
+			<div class="showPic1">
+				<img src="img/index/indexbag1.jpg" />
+			</div>
+			<div class="showPic2"><a href="#"><img src="img/index/indexbag2.jpg"/></a></div>
+			</div>
+			<div class="showPicBottom">
+			<div class="showPic3"><a href="#"><img src="img/index/indexbag3.JPG"/></a></div>
+			<div class="showPic4">
+				<div class="showPic4_1"><a href="#"><img src="img/index/indexbag4.jpg"/></a></div>
+				<div class="showPic4_2"><a href="#"><img src="img/index/indexbag5.jpg"/></a></div>
+			</div>
+			</div>
+		</div>
+		<div class="title"><p>声明：珍品网不会以电话、短信等任何形式要求顾客退款、转账或提供密码等隐私信息，如遇此类问题，请及时致电官方唯一客服电话：400-009-6666，或联系珍品时尚顾问咨询核实，请务必提高警惕，避免上当受骗！</p></div>
+		<!-------------------other--------------------->
+		<div class="outerOther">
+			<div class="footer">
+				<div class="footerLeft">
+					<div class="footerLeftTop">
+						<a class="link1" href="#"></a>
+						<a class="link2" href="#"></a>
+						<a class="link3" href="#"></a>
+					</div>
+					<ul class="footerLeftBotton">
+						<li>
+							<strong>新手指导</strong>
+							<a href="#">常见问题</a>
+							<a href="#">联系客服</a>
+							<a href="#">正品保障</a>
+							<a href="#">全球免税店</a>
+						</li>
+						<li>
+							<strong>新手指导</strong>
+							<a href="#">常见问题</a>
+							<a href="#">联系客服</a>
+							<a href="#">正品保障</a>
+							<a href="#">全球免税店</a>
+						</li>
+						<li>
+							<strong>支付方式</strong>
+							<a href="#">常见问题</a>
+							<a href="#">联系客服</a>
+							
+						
+						</li>
+						<li>
+							<strong>售后服务</strong>
+							<a href="#">常见问题</a>
+							<a href="#">联系客服</a>
+							
+						</li>
+						<li>
+							<strong>配送说明</strong>
+							<a href="#">常见问题</a>
+							<a href="#">联系客服</a>
+							<a href="#">正品保障</a>
+							<a href="#">全球免税店</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footerRight">
+					<div class="footerRightLeft">
+						<p class="jju1"><b>关注我们</b></p>
+						<div class="jju2">
+							<p style="font-size: 13px;"><a href="#">下载App</a></p>
+							<p><a href="#">首单满200立减100</a></p>
+						</div>
+						<div class="jju3">
+							<img src="img/index/zpg_wximg.jpg"/>
+						</div>
+						
+					</div>
+					<div class="footerRightRight">
+						<p class="ccu1"><b>联系我们</b></p>
+						<div class="ccu2">
+							<p><a href="#">在线客服</a></p>
+						</div>
+						<div class="ccu3">
+							<img src="img/index/zpg_time.jpg"/>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<!------------------------bottom-------------------->
+		<div class="outerBottom">
+			<div class="bottom">
+				<div><p><a href="#">企业客户</a><span>|</span>
+						<a href="#">关于我们</a><span>|</span>
+						<a href="#">联系我们</a><span>|</span>
+						<a href="#">人才招聘</a><span>|</span>
+						<a href="#">企业客户</a><span>|</span>
+						<a href="#">合作伙伴</a><span>|</span>	
+				</div>
+				<div><p>京ICP证110290号 | 京ICP备11014626号-5 | 京公网安备11010502025723号 | 食品流通许可证SP1101121310106363(1-1) | 出版物经营许可证 新出发京批字第直130121号</p></div>
+			
+		</div>
+		</div>
+		
+	</body>
+	
+</html>

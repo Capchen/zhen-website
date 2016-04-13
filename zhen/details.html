@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/details.css"/>
+		<script src="js/jquery-1.12.0.js"></script>
+	<script type="text/javascript">
+function getByClass(oParent, sClass)
+{
+	var aEle=oParent.getElementsByTagName('*');
+	var aTmp=[];
+	var i=0;
+	
+	for(i=0;i<aEle.length;i++)
+	{
+		if(aEle[i].className==sClass)
+		{
+			aTmp.push(aEle[i]);
+		}
+	}
+	
+	return aTmp;
+}
+
+window.onload=function ()
+{
+	
+			
+			//当搜索栏的得到和失去焦点时的时间
+			
+			$("#searchShopping").on("focus",function(){
+				$(this).val("");
+			})
+			$("#searchShopping").on("blur",function(){
+				$(this).val("MK包");
+			})
+	
+	
+	
+	//放大镜
+	var oDiv=document.getElementById('div1');
+	var oMark=getByClass(oDiv, 'mark')[0];
+	var oFloat=getByClass(oDiv, 'float_layer')[0];
+	var oBig=getByClass(oDiv, 'big_pic')[0];
+	var oSmall=getByClass(oDiv, 'small_pic')[0];
+	var oImg=oBig.getElementsByTagName('img')[0];
+	
+	oMark.onmouseover=function ()
+	{
+		oFloat.style.display='block';
+		oBig.style.display='block';
+	};
+	
+	oMark.onmouseout=function ()
+	{
+		oFloat.style.display='none';
+		oBig.style.display='none';
+	};
+	
+	oMark.onmousemove=function (ev)
+	{
+		var oEvent=ev||event;
+		
+		var l=oEvent.pageX-oDiv.offsetLeft-oSmall.offsetLeft-oFloat.offsetWidth/2;
+		var t=oEvent.pageY-oDiv.offsetTop-oSmall.offsetTop-oFloat.offsetHeight/2;
+		
+		if(l<0)
+		{
+			l=0;
+		}
+		else if(l>oMark.offsetWidth-oFloat.offsetWidth)
+		{
+			l=oMark.offsetWidth-oFloat.offsetWidth;
+		}
+		
+		if(t<0)
+		{
+			t=0;
+		}
+		else if(t>oMark.offsetHeight-oFloat.offsetHeight)
+		{
+			t=oMark.offsetHeight-oFloat.offsetHeight;
+		}
+		
+		oFloat.style.left=l+'px';
+		oFloat.style.top=t+'px';
+		
+		var percentX=l/(oMark.offsetWidth-oFloat.offsetWidth);
+		var percentY=t/(oMark.offsetHeight-oFloat.offsetHeight);
+		
+		oImg.style.left=-percentX*(oImg.offsetWidth-oBig.offsetWidth)+'px';
+		oImg.style.top=-percentY*(oImg.offsetHeight-oBig.offsetHeight)+'px';
+	};
+	
+	$(".smallPic li").hover(function(){
+		$(this).css({
+			opacity:"1"
+		})
+	},function(){
+		$(this).css({
+			opacity:"0.5"
+		})
+	})
+	
+	//侧边栏
+	$(".sidebar li").hover(function(){
+			
+			$(this).find("div").show().stop().animate({
+			left:"-110px"})
+		},function(){
+			$(this).find("div").stop().animate({
+			left:"0"},function(){
+				$(this).hide();
+			})
+		})
+	
+	//选项卡
+	$(".tab_top>div").on("click",function(){
+		$(".tab_top>div").removeClass("clickShow");
+		var num=$(this).index()+1;
+		$(this).addClass("clickShow");
+		$(".tab_content>div").hide();
+		$(".tab_content"+num).show();
+	})
+	//点击加号减号数量会发生改变
+	$("#add").on("click",function(){
+		$("#num").val(parseInt($("#num").val())+1);		
+	})
+	$("#reduce").on("click",function(){
+		$("#num").val(parseInt($("#num").val())-1);		
+	})
+	
+	
+	
+	
+	
+	
+	
+	//点击放入购物袋，会把当前详情页的商品信息通过cookie存储的方式传给shoppingCar页面			
+	$("#joinShoppingCar").on("click",function(){
+		$("#shoppingNum").html(parseInt($("#shoppingNum").html())+1);
+		document.cookie="num="+parseInt($("#shoppingNum").html());
+		document.cookie="name="+encodeURI($(".thisMsgOne>p").html()+$(".thisMsgOne>span").html());
+		document.cookie="zhenpinprice="+encodeURI($(".zhenpinPrice").html());
+		document.cookie="goodscount="+encodeURI($("#num").val());	
+		//console.info(document.cookie)
+	})	
+};
+
+</script>	
+		
+		
+	</head>
+	<body>
+		<div class="ewm">
+			<a href=""><img src="img/index/ewm.png"/></a>
+		</div>
+		<!--====================侧边栏======================-->
+		<div class="sidebar">
+			<div class="fuck"></div>
+			<ul class="sidebar_ul">
+				<li>
+					<a id="sidebar1"></a>
+					<div class="whichNeed">点我</div>
+				</li>
+				<li>
+					<a id="sidebar2"></a>
+					<div class="whichNeed">没错</div>
+				</li>
+				<li>
+					<a id="sidebar3"></a>
+					<div class="whichNeed">点我！</div>
+				</li>
+				<li>
+					<a id="sidebar4"></a>
+					<div class="whichNeed">点我嘛~</div>
+				</li>
+				<li>
+					<a id="sidebar5"></a>
+					<div class="whichNeed">就是我~</div>
+				</li>
+				<li>
+					<a id="sidebar6"></a>
+					<div class="whichNeed">哇哦~~~</div>
+				</li>
+				<li id="sidebar7"></li>
+				
+			</ul>
+		</div>
+		<!--------------top------------->
+		<div class="outerTop">
+			<div class="top"><img src="img/index/top.jpg"/></div>
+		</div>
+		<!------------------nav--------------->
+		<div class="outerNav">
+			<div class="nav">
+				<div class="nav_left">
+					<a class="youhui" href="#"></a>
+					<ul class="navNavLeft">
+						<li><a href="#">全球免税店</a>
+						</li>
+						<li id="xiangbao">
+							<a href="#">箱包</a>
+							<div id="left1">
+								<ul class="left1_0">
+									<li class="header">女士箱包</li>
+								</ul>
+								<ul class="left1_1">
+									<li class="header">男士箱包</li>
+								</ul>
+								<ul class="left1_2">
+									<li class="header">热门品牌</li>
+								</ul>
+								<ul class="left1_3">
+									<li class="header">热门词</li>
+								</ul>
+								<img src="" />
+							</div>
+						</li>
+						<li id="peishi">
+							<a href="#">配饰</a>
+							<div id="left2">
+								<ul class="left2_0">
+									<li class="header">女士配饰</li>
+								</ul>
+								<ul class="left2_1">
+									<li class="header">男士配饰</li>
+								</ul>
+								<ul class="left2_2">
+									<li class="header">热门品牌</li>
+								</ul>
+								<ul class="left2_3">
+									<li class="header">热门词</li>
+								</ul>
+								<img src="" />
+							</div>
+							
+						</li>
+						<li id="cloths">
+							<a href="#">服装</a>
+							<div id="left3">
+								<ul class="left3_0">
+									<li class="header">女士配饰</li>
+								</ul>
+								<ul class="left3_1">
+									<li class="header">男士配饰</li>
+								</ul>
+								<ul class="left3_2">
+									<li class="header">热门品牌</li>
+								</ul>
+								<ul class="left3_3">
+									<li class="header">热门词</li>
+								</ul>
+								<img src="" />
+							</div>
+						</li>
+						<li id="shoots">
+							<a href="#">鞋靴</a>
+							<div id="left4">
+								<ul class="left4_0">
+									<li class="header">女士配饰</li>
+								</ul>
+								<ul class="left4_1">
+									<li class="header">男士配饰</li>
+								</ul>
+								<ul class="left4_2">
+									<li class="header">热门品牌</li>
+								</ul>
+								<ul class="left4_3">
+									<li class="header">热门词</li>
+								</ul>
+								<img src="" />
+							</div>
+							
+						</li>
+						<li><a href="#">新品</a></li>
+						
+					</ul>
+				</div>
+				<div class="nav_middle">
+					<a href="index.html"><span>珍品</span><p>股票代码835700</p>
+					</a>
+				</div>
+				<div class="nav_right">
+					<ul>
+						<li><a href="html/Login.html">登录</a><span>丨</span></li>
+						<li><a href="html/regsiter.html ">注册</a><span>丨</span></li>
+						<li id="shoppingCar"></li>
+						<li><a href="html/shoppingCar.html">购物袋</a></li><span id="shoppingNum">0</span>
+						
+					</ul>
+					<div>
+						<input id="searchShopping" type="text" value="MK包" />
+						<input id="searchPic" type="button"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--===================tip====================-->
+		<div class="tip">
+			<p><b>Calvin Klein</b> > 卡尔文·克莱恩 黑色 皮革 男士长款钱包 37305589010</p>
+		</div>
+		<!--=======================main===============-->
+		<div class="main">
+			<div class="main_left">
+				<ul class="smallPic">
+					<li id="shang"></li>
+					<li id="smallPic1"></li>
+					<li id="smallPic2"></li>
+					<li id="smallPic3"></li>
+					<li id="smallPic4"></li>
+					<li id="smallPic5"></li>
+					<li id="xia"></li>
+				</ul>
+				<ul class="nolPic">
+					<div id="div1">
+
+					    <div class="small_pic">
+							<span class="mark">
+								
+							</span>
+					        <span class="float_layer"></span>
+					        <img src="img/details/nolPic.png" alt="妙味课堂 - 放大镜图片一" longdesc="http://www.miaov.com" />
+					    </div>
+					
+					    <div class="big_pic">
+							<img src="img/details/bigPic.jpg" alt="妙味课堂 - 放大镜图片二" longdesc="http://www.miaov.com" />
+						</div>
+					<div class="share">
+									<p>分享到</p><a class="sharePic"></a>
+					</div>
+					</div>
+					
+				</ul>
+				
+			</div>
+			
+			<div class="main_right">
+				<div class="thisMsgOne">
+					<p>Calvin Klein</p>
+					<span>卡尔文·克莱恩 黑色 皮革 男士长款钱包 37305589010</span>
+				</div>
+				<div class="thisTwo"><span class="rigthTitle">商品编号</span>16816902</div>
+				<div class="thisTwo"><span class="rigthTitle">珍 品 价</span><a class="zhenpinPrice">599</a>市场价 ￥1440</div>
+				<div class="thisTwo"><span class="rigthTitle">赠送服务</span>价值￥388免费养护一次；售后3月内免费维修查看详情</div>
+				<div class="thisThree">
+					<div class="thisTwo"><span class="rigthTitle">颜&nbsp;&nbsp;&nbsp;色</span><a class="zhenpinColor"></a></div>
+					<div class="thisTwo"><span class="rigthTitle">数&nbsp;&nbsp;&nbsp;量</span><input type="button" value="-" id="reduce"/><input id="num" type="text" value="1"/><input type="button" value="+" id="add"/>此商品需调货，预计下单后3-6天收到货品</div>
+				</div>
+				<div class="thisfour"><input id="buyNow" type="button" value="立即购买"/><input id="joinShoppingCar" type="button" value="放入购物袋"/><input id="joinUlike" type="button" value="加入收藏"/></div>
+				<div class="thisfive"></div>
+			</div>
+		</div>
+		<!--=========================tab====================-->
+		<div class="tab">
+			<div class="tab_top">
+				<div>商品详情</div>
+				<div>评价详情</div>
+				<div>配送及售后</div>
+			</div>
+			<div class="tab_content">
+			<div class="tab_content1">我是商品详情</div>
+			<div class="tab_content2">我是评价详情</div>
+			<div class="tab_content3">我是配送及售后</div>
+			</div>
+		</div>
+		<!-------------------other--------------------->
+		<div class="outerOther">
+			<div class="footer">
+				<div class="footerLeft">
+					<div class="footerLeftTop">
+						<a class="link1" href="#"></a>
+						<a class="link2" href="#"></a>
+						<a class="link3" href="#"></a>
+					</div>
+					<ul class="footerLeftBotton">
+						<li>
+							<strong>新手指导</strong>
+							<a href="#">常见问题</a>
+							<a href="#">联系客服</a>
+							<a href="#">正品保障</a>
+							<a href="#">全球免税店</a>
+						</li>
+						<li>
+							<strong>新手指导</strong>
+							<a href="#">常见问题</a>
+							<a href="#">联系客服</a>
+							<a href="#">正品保障</a>
+							<a href="#">全球免税店</a>
+						</li>
+						<li>
+							<strong>支付方式</strong>
+							<a href="#">常见问题</a>
+							<a href="#">联系客服</a>
+							
+						
+						</li>
+						<li>
+							<strong>售后服务</strong>
+							<a href="#">常见问题</a>
+							<a href="#">联系客服</a>
+							
+						</li>
+						<li>
+							<strong>配送说明</strong>
+							<a href="#">常见问题</a>
+							<a href="#">联系客服</a>
+							<a href="#">正品保障</a>
+							<a href="#">全球免税店</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footerRight">
+					<div class="footerRightLeft">
+						<p class="jju1"><b>关注我们</b></p>
+						<div class="jju2">
+							<p style="font-size: 13px;"><a href="#">下载App</a></p>
+							<p><a href="#">首单满200立减100</a></p>
+						</div>
+						<div class="jju3">
+							<img src="img/index/zpg_wximg.jpg"/>
+						</div>
+						
+					</div>
+					<div class="footerRightRight">
+						<p class="ccu1"><b>联系我们</b></p>
+						<div class="ccu2">
+							<p><a href="#">在线客服</a></p>
+						</div>
+						<div class="ccu3">
+							<img src="img/index/zpg_time.jpg"/>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<!------------------------bottom-------------------->
+		<div class="outerBottom">
+			<div class="bottom">
+				<div><p><a href="#">企业客户</a><span>|</span>
+						<a href="#">关于我们</a><span>|</span>
+						<a href="#">联系我们</a><span>|</span>
+						<a href="#">人才招聘</a><span>|</span>
+						<a href="#">企业客户</a><span>|</span>
+						<a href="#">合作伙伴</a><span>|</span>	
+				</div>
+				<div><p>京ICP证110290号 | 京ICP备11014626号-5 | 京公网安备11010502025723号 | 食品流通许可证SP1101121310106363(1-1) | 出版物经营许可证 新出发京批字第直130121号</p></div>
+			
+		</div>
+		</div>
+	</body>
+</html>

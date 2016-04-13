@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link type="text/css" href="../css/regsiter.css" rel="stylesheet"/>
+		<script src="../js/jquery-1.12.0.js"></script>
+		<script src="../js/jquery.validate.js"></script>
+		<script src="../js/jquery.metadata.js"></script>
+		<script>
+			$(document).ready(function(){
+				//生成验证码
+	var oBtn=$('#changCode');
+	var oTxt=$('#checkCodePic');
+	var arr=['a','b','c','d','e',
+			'f','g','h','i','j',
+			'k','l','m','n','o',
+			'p','q','r','s','t',
+			'u','v','w','x','y',
+			'z','0','1','2','3',
+			'4','5','6','7','8',
+			'9']
+	
+	function al(){
+		var str='';
+		while(str.length<4){
+			var num=parseInt(Math.random()*100);					
+			while(num>35){
+				num=parseInt(Math.random()*100);
+			}
+			str+=arr[num];
+		}
+		oTxt.html(str);
+	}
+	al();	
+	
+	oBtn.click(
+		function(){
+			var str='';
+			while(str.length<4){
+				var num=parseInt(Math.random()*100);					
+				while(num>35){
+					num=parseInt(Math.random()*100);
+				}
+				str+=arr[num];
+			}
+			oTxt.html(str);
+		}
+	)
+				//修改通過vatadata修改提示的值
+				$.extend($.validator.messages, {
+					required: "必填",
+					email: "请输入正确格式"
+				});
+				$("#myform").validate();
+				
+				
+				//当密码框失去焦点的时候验证
+				$("#password").on("blur",function(){
+					var passVal = $('#password').val();			
+					var passReg = /^.{6,12}$/;
+					//验证失败 提示
+					if(!passReg.test(passVal)) {
+					$('#passError').html("密码长度为6~12");
+					} else {
+					$('#passError').html("nice");
+					}
+				})
+				//验证将要用户注册的账号是否唯一
+				$("#email").on("blur",function(){
+					var emailValue=$("#email").val();
+					//ajax将数据传送到后台验证，如果存在返回true
+					/*$.get('http://10.2.164.94:3000/userSeq',{name:uName},function(e) {
+					
+					if(e.data) {
+						$("#nameyou").html('用户名已存在,请换一个');
+					} else {
+						$("#nameyou").html('可以注册');
+					}*/
+					if (emailValue=="184366107@qq.com") {
+						$("#emailError").html("用户已存在");
+					}else{
+						$("#emailError").html("");
+					}
+					
+				
+				})
+				//确认两次密码是否一致
+				$("#confirm_password").on("blur",function(){
+					var Opassword=document.getElementById("password")
+					if (this.value==Opassword.value) {
+						$("#passErrorAgain").html("")
+					}else{
+						$("#passErrorAgain").html("密码不一致")
+					}
+				})
+				
+				
+			});
+		</script>
+	</head>
+	<body>
+		<!---------------------header-------------------------->
+		<div class="outerHeader">
+			<div class="header">
+				<div class="headerLeft">
+					<a class="zhegea" href="../index.html"><span>珍品</span>
+					 <p>SYM835700</p>
+					</a>
+				</div>
+				<ul class="headerRight">
+					<li><img src="../img/login/headerLi1.png"/></li>
+					<li><img src="../img/login/headerLi2.png"/> </li>
+					<li><img src="../img/login/headerLi3.png"/> </li>
+				</ul>
+			</div>
+		</div>
+		<!--============================main==============================-->
+	<div class="outerMain">	
+		<div class="main">
+			<div class="top">
+				<span class="top1">立即注册珍品网,<a class="top2" href="#">获得100积分</a></span><span  class="top3">我已经注册,现在就<a class="top4" href="Login.html">登陆</a></span>
+			</div>
+			<!--输入的信息-->
+			<div class="info">
+				<form id="myform">
+				<p>
+	                <label for="email">邮箱:</label>
+	                <input id="email" name="email" class="required email" />
+	                <span  id='emailError' class='error-info'></span>
+	            </p>
+	            <p>
+	                <label for="password">密码:</label>
+					<input type="password" id="password" name="password"/>
+					<span  id='passError' class='error-info'></span>
+	            </p>
+	            
+	            <p>
+	                <label for="confirm_password">确认密码:</label>
+	                <input id="confirm_password" name="confirm_password" type="password"/>
+	               <span id='passErrorAgain' class='error-info'></span>
+	            </p>
+	            <p>
+	                <label for="checkCode">验证码:</label>
+					<input type="text" id="checkCode" name="checkCode"/>
+					<div id='checkCodePic' class='checkCodePic'></div><a id="changCode" href="#">换一张</a>
+	            </p>
+	            <div id="checkBox"><p><input type="checkbox" checked="checked"/>我已阅读并同意<a href="#">卖身契</a></p></div>
+	            	<a href="#" id="regsiter">注册</a> 
+				</form>
+				<div class="infoRight">
+					<img src="../img/login/tu.jpg" />
+				</div>
+			</div>
+		</div>
+	</div>	
+		<!--==========================foot===================-->
+		<div class="outerBottom">
+			<div class="bottom">
+				<div><p><a href="#">企业客户</a><span>|</span>
+						<a href="#">关于我们</a><span>|</span>
+						<a href="#">联系我们</a><span>|</span>
+						<a href="#">人才招聘</a><span>|</span>
+						<a href="#">企业客户</a><span>|</span>
+						<a href="#">合作伙伴</a><span>|</span>	
+				</div>
+				<div><p>京ICP证110290号 | 京ICP备11014626号-5 | 京公网安备11010502025723号 | 食品流通许可证SP1101121310106363(1-1) | 出版物经营许可证 新出发京批字第直130121号</p></div>
+			
+		</div>
+	</body>
+</html>
+

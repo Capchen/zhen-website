@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/shoppingCar.css" />
+		<script type="text/javascript" src="../js/jquery-1.12.0.js" ></script>
+		<script>
+			$(document).ready(function(){
+			//通过调用cookie来获取调入的商品信息
+			var ineedCookie=document.cookie;
+			//console.info(ineedCookie);
+			var jju=ineedCookie.split(";");
+			var arrss=[];
+			for(var j=0;j<jju.length;j++){
+				var ars=jju[j].split("=");
+				arrss[j]=decodeURI(ars[1]);					
+			}
+			
+			$("#cartTable>tbody").html("<tr><td class='checkbox'><input class='check-one check' type='checkbox'/></td>"+
+				"<td class='goods'><img src='../img/details/list2.jpg' alt=''/><span>"+arrss[1]+"</span></td>"+
+				"<td class='price'>"+arrss[2]+"</td>"+
+				"<td class='count'><span class='reduce'>-</span><input class='count-input' type='text' value="+arrss[3]+"><span class='add'>+</span></td>"+
+				"<td class='subtotal'>"+arrss[2]*arrss[3]+"</td>"+
+				"<td class='operation'><span class='delete'>删除</span></td></tr>")
+			$("#allgoodsPrice").html(arrss[0]);
+			$("#priceTotal").html(arrss[2]*arrss[3]);
+			
+			//点击加号和减号数量和金钱会发生相应的变化
+			$(".add").on("click",function(){
+				$(".count-input").val(parseInt($(".count-input").val())+1);
+				//console.info($(this).parent());
+				var nowyouneedPrice=$(this).parent().prev().html();
+				$(".subtotal").html(parseInt($("#priceTotal").html())+parseInt(nowyouneedPrice));
+				$("#priceTotal").html(parseInt($("#priceTotal").html())+parseInt(nowyouneedPrice));
+			})
+			$(".reduce").on("click",function(){
+				$(".count-input").val(parseInt($(".count-input").val()-1));
+				var nowyouneedPrice=$(this).parent().prev().html();
+				$(".subtotal").html(parseInt($("#priceTotal").html())-parseInt(nowyouneedPrice));
+				$("#priceTotal").html(parseInt($("#priceTotal").html())-parseInt(nowyouneedPrice));
+			})
+			//点击删除
+			$(".delete").on("click",function(){
+				$(this).parent().parent().remove();
+			})
+			
+		
+			
+			})
+		</script>
+	</head>
+	<body>
+		<!---------------------header-------------------------->
+		<div class="outerHeader">
+			<div class="header">
+				<div class="headerLeft">
+					<a class="zhegea" href="../index.html"><span>珍品</span>
+					 <p>SYM835700</p>
+					</a>
+				</div>
+				<ul class="headerRight">
+					<li><img src="../img/shoppingCar/123.png"/></li>
+					<li><img src="../img/shoppingCar/time.png"/> </li>
+				</ul>
+			</div>
+		</div>
+		<!--=======================main=========================-->
+		<div class="shopping_main1">我的购物袋</div>
+		<div class="shopping_main2">尊敬的用户，珍品网承诺承诺：所售商品100%正品</div>
+		<div class="shopping_main3">
+			<div class="catbox">
+
+				<table id="cartTable">
+					<thead>
+						<tr>
+							<th><label><input class="check-all check" type="checkbox"/>&nbsp;全选</label></th>
+							<th>商品</th>
+							<th>单价</th>
+							<th>数量</th>
+							<th>小计</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!--<tr>
+							<td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+							<td class="goods"><img src="images/1.jpg" alt=""/><span>Casio/卡西欧 EX-TR350</span></td>
+							<td class="price">5999.88</td>
+							<td class="count"><span class="reduce"></span><input class="count-input" type="text" value="0"/><span class="add">+</span></td>
+							<td class="subtotal">5999.88</td>
+							<td class="operation"><span class="delete">删除</span></td>
+						</tr>-->
+					
+					</tbody>
+				</table>
+	<div class="goodsInfo">
+		<div><p>商品数量:<span id="allgoodsPrice">0</span></p></div>
+		<div><p>优惠:</p></div>
+	</div>
+	
+	<div class="foot" id="foot">
+		<!--<label class="fl select-all"><input type="checkbox" class="check-all check"/>&nbsp;全选</label>
+		<a class="fl delete" id="deleteAll" href="javascript:;">删除</a>-->
+		<!--<div class="fr closing">结 算</div>-->
+		<div class="fr total">合计：￥<span id="priceTotal"></span></div>
+		<!--<div class="fr selected" id="selected">已选商品<span id="selectedTotal">0</span>件<span class="arrow up">︽</span><span class="arrow down">︾</span></div>-->
+		<!--<div class="selected-view">
+			<div id="selectedViewList" class="clearfix">
+				<div><img src="images/1.jpg"><span>取消选择</span></div>
+			</div>
+			<span class="arrow">◆<span>◆</span></span>
+		</div>-->
+	</div>
+
+</div>
+		</div>
+		<!--==========================foot===================-->
+		<div class="outerBottom">
+			<div class="bottom">
+				<div><p><a href="#">企业客户</a><span>|</span>
+						<a href="#">关于我们</a><span>|</span>
+						<a href="#">联系我们</a><span>|</span>
+						<a href="#">人才招聘</a><span>|</span>
+						<a href="#">企业客户</a><span>|</span>
+						<a href="#">合作伙伴</a><span>|</span>	
+				</div>
+				<div><p>京ICP证110290号 | 京ICP备11014626号-5 | 京公网安备11010502025723号 | 食品流通许可证SP1101121310106363(1-1) | 出版物经营许可证 新出发京批字第直130121号</p></div>
+			
+		</div>
+	</body>
+</html>
+	</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link type="text/css" href="../css/login.css" rel="stylesheet"/>
+		<link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css" />
+		<script src="../js/jquery-1.12.0.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<!---------------------header-------------------------->
+		<div class="outerHeader">
+			<div class="header">
+				<div class="headerLeft">
+					<a class="zhegea" href="../index.html"><span>珍品</span>
+					 <p>SYM835700</p>
+					</a>
+				</div>
+				<ul class="headerRight">
+					<li><img src="../img/login/headerLi1.png"/></li>
+					<li><img src="../img/login/headerLi2.png"/> </li>
+					<li><img src="../img/login/headerLi3.png"/> </li>
+				</ul>
+			</div>
+		</div>
+		<!--============================main==============================-->
+		<div class="main">
+			<div class="loginBox">
+				<div class="title">登录珍品网</div>
+				<div class="panel">
+					<div class="panel-body">
+  
+						<form class="form-horizontal">
+						  <div class="input-group">
+						  	<div class="input-group-addon">@</div>
+						  
+						     <input type="email" class="form-control" id="inputEmail3" placeholder="用户名" >
+						    
+						  </div>
+						  <div class="input-group">
+						   		<div class="input-group-addon">◇</div>
+						      <input type="password" class="form-control" id="inputPassword3" placeholder="密码">
+						   
+						  </div>
+						  <div class="form-group">
+						    <div class="col-sm-offset-2 col-sm-10">
+						      <div class="checkbox">
+						        <label>
+						          <input type="checkbox">记住我(下次自动登录)</label>
+						          <p><a href="../forgetpassword.html">忘记密码？</a></p>
+						      </div>
+						    </div>
+						  </div>
+						 	<a class="btn btn-danger">登录</a>
+							
+						</form>
+						<p></p><a href="regsiter.html" class="btn btn-primary btn-sm">注册</a>
+					</div>
+				</div>
+				<div class="link">
+					<p>合作网络商户登录</p>
+					<a href="#"></a>
+				</div>
+			</div>
+		</div>
+		<!--==========================foot===================-->
+		<div class="outerBottom">
+			<div class="bottom">
+				<div><p><a href="#">企业客户</a><span>|</span>
+						<a href="#">关于我们</a><span>|</span>
+						<a href="#">联系我们</a><span>|</span>
+						<a href="#">人才招聘</a><span>|</span>
+						<a href="#">企业客户</a><span>|</span>
+						<a href="#">合作伙伴</a><span>|</span>	
+				</div>
+				<div><p>京ICP证110290号 | 京ICP备11014626号-5 | 京公网安备11010502025723号 | 食品流通许可证SP1101121310106363(1-1) | 出版物经营许可证 新出发京批字第直130121号</p></div>
+			
+		</div>
+	</body>
+	<script>
+		$(".btn").on("click",function(){
+			var emailVal=$("#inputEmail3").val();
+			var passVal=$("#inputPassword3").val();
+			if (emailVal==""||passVal=="") {
+				alert("您的输入有错误,是否前往注册页面")
+			}else{
+				$(".btn").attr("href","../index.html");
+			}
+		})
+	</script>
+</html>

@@ -1,0 +1,100 @@
+
+{
+	"data":[{
+		"id":1,
+		"name":"Modalu",
+		"introduce":"莫戴璐 1chelsea法国风情织物女士牛皮单肩包黑色",
+		"nowprice":34,
+		"oldprice":1500,
+		"pic":"img/goods/pic1.jpg"
+},
+{	
+	"id":2,
+	"name":"Modalu",
+	"introduce":"莫戴璐 2chelsea法国风情织物女士牛皮单肩包黑色",
+	"nowprice":20,
+	"oldprice":1500,
+	"pic":"img/goods/pic2.jpg"
+},
+{	
+	"id":3,
+	"name":"Modalu",
+	"introduce":"莫戴璐 3chelsea法国风情织物女士牛皮单肩包黑色",
+	"nowprice":11,
+	"oldprice":1500,
+	"pic":"img/goods/pic3.JPG"
+},
+{
+	"id":4,
+	"name":"Modalu",
+	"introduce":"莫戴璐4 chelsea法国风情织物女士牛皮单肩包黑色",
+	"nowprice":44,
+	"oldprice":1500,
+	"pic":"img/goods/pic4.jpg"
+},
+{
+	"id":5,
+	"name":"Modalu",
+	"introduce":"莫戴璐5 chelsea法国风情织物女士牛皮单肩包黑色",
+	"nowprice":333,
+	"oldprice":1500,
+	"pic":"img/goods/pic5.JPG"
+},
+{
+	"id":6,
+	"name":"Modalu",
+	"introduce":"莫戴璐6 chelsea法国风情织物女士牛皮单肩包黑色",
+	"nowprice":999,
+	"oldprice":1500,
+	"pic":"img/goods/pic6.JPG"
+},
+{
+	"id":7,
+	"name":"Modalu",
+	"introduce":"莫戴璐 7chelsea法国风情织物女士牛皮单肩包黑色",
+	"nowprice":3,
+	"oldprice":1500,
+	"pic":"img/goods/pic1.jpg"
+},
+{
+	"id":8,
+	"name":"Modalu",
+	"introduce":"莫戴璐 8chelsea法国风情织物女士牛皮单肩包黑色",
+	"nowprice":2,
+	"oldprice":1500,
+	"pic":"img/goods/pic2.jpg"
+},
+{
+	"id":9,
+	"name":"Modalu",
+	"introduce":"莫戴璐 9chelsea法国风情织物女士牛皮单肩包黑色",
+	"nowprice":6789,
+	"oldprice":1500,
+	"pic":"img/goods/pic4.jpg"
+},
+{
+	"id":10,
+	"name":"Modalu",
+	"introduce":"莫戴璐10 chelsea法国风情织物女士牛皮单肩包黑色",
+	"nowprice":6321,
+	"oldprice":1500,
+	"pic":"img/goods/pic4.jpg"
+},
+{
+	"id":11,
+	"name":"Modalu",
+	"introduce":"莫戴璐11 chelsea法国风情织物女士牛皮单肩包黑色",
+	"nowprice":3838,
+	"oldprice":1500,
+	"pic":"img/goods/pic4.jpg"
+},
+{
+	"id":12,
+	"name":"Modalu",
+	"introduce":"莫戴璐12 chelsea法国风情织物女士牛皮单肩包黑色",
+	"nowprice":9995,
+	"oldprice":1500,
+	"pic":"img/goods/pic4.jpg"
+}
+]	
+}

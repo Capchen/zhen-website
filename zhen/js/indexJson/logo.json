@@ -1,0 +1,23 @@
+{
+	"logoName":[{
+		"name":"logo1",
+		"href":"img/index/armani.jpg"	
+	},{
+		"name":"logo2",
+		"href":"img/index/bally.jpg"
+	},{
+		"name":"logo3",
+		"href":"img/index/bottega-veneta.jpg"
+	},{
+		"name":"logo4",
+		"href":"img/index/burberry.jpg"
+	},{
+		"name":"logo5",
+		"href":"img/index/z-zegna.jpg"
+	},{
+		"name":"logo6",
+		"href":"img/index/coach.jpg"
+	}
+	
+	]
+}

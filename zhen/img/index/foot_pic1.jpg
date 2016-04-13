@@ -1,0 +1,637 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0020)http://www.zhen.com/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script charset="utf-8" src="./foot_pic1_files/v.js"></script>
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+		<meta property="qc:admins" content="2541756207620566375">
+		<script src="./foot_pic1_files/hm.js"></script><script async="" src="./foot_pic1_files/analytics.js"></script><script type="text/javascript" async="" src="./foot_pic1_files/pixel.php"></script><script async="true" type="text/javascript" src="./foot_pic1_files/event" data-owner="criteo-tag"></script><script type="text/javascript" src="./foot_pic1_files/jquery-1.7.2.min.js"></script>
+		<title>珍品网—中国领先的奢侈品购物网站_专柜同步_100%正品</title> 
+		<link href="./foot_pic1_files/main.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="./foot_pic1_files/ZP_newcommon.js"></script>
+		<link href="./foot_pic1_files/newIndex.css" rel="stylesheet" type="text/css">		<script type="text/javascript" src="./foot_pic1_files/ZP_newindex.js"></script> 	<script>
+var ZP = {domain:'http://www.zhen.com/',userBehavUrl:'http://zc.zhen.com:8081/',recommendUrl:'http://api.zhen.net:8380/',my:'http://my.zhen.com/',img:'http://zhenimg.com/',server:'http://trade.zhen.com/',login:'http://passport.zhen.com/login.html?returnUrl='+window.location.href,register:'http://passport.zhen.com/reg.html?returnUrl='+window.location.href,logout:'http://passport.zhen.com/logout.html?&returnUrl='+window.location.href}
+window.onerror = function(){return true;}
+    var DeviceInfo = function(a) {
+        var b = {
+            os: "",
+            browser: "",
+            browser_engine: "",
+            device: "",
+            ratio: "",
+            type: "",
+            user_agent: a
+        }, d = function() {
+                return a.match(/(iphone|iPad|iPod)/i) ? "ios" : a.match(/mac os x/i) ? "osx" : a.match(/android/i) ? "android" : a.match(/windows phone/i) ? "wp" : a.match(/windows/i) ? "windows" : a.match(/linux/i) ? "linux" : a.match(/meego/i) ? "meego" : "" };
+        b.os = d();
+        b.type = a.match(/(iphone|iPod|blackberry|htc|lg|nokia|opera mini|smartphone|SonyEricsson|Samsung|MobileExplorer|Windows phone|Windows Mobile|IEMobile|Windows CE|Googlebot|Baiduspider)/i) ||
+            a.match(/android/i) && a.match(/mobile|mobi/i) || location.search.match(/fromUC/i) ? "mobile" : a.match(/(iPad|SCH-I800|xoom|kindle)/i) || a.match(/android/i) && !a.match(/mobile|mobi/i) ? "pad" : -1 < "windows osx linux".indexOf(d()) ? "pc" : "";
+        b.ratio = window.devicePixelRatio || 1;
+        b.browser = a.match(/msie/i) ? "ie" : a.match(/chrome/i) ? "chrome" : a.match(/b360/i) ? "360browser" : a.match(/uc/i) ? "uc" : a.match(/opera/i) ? "opera" : a.match(/qq/i) ? "qq" : a.match(/firefox/i) ? "firefox" : a.match(/safari/i) ? "safari" : "";
+        b.browser_engine = a.match(/webkit/i) ? "webkit" : a.match(/trident/i) ? "trident" : a.match(/netfront/i) ? "netfront" : "";
+        b.device = a.match(/ipad/i) ? "ipad" : a.match(/iphone/i) ? "iphone" : a.match(/ipod/i) ? "ipod" : "";
+        return b
+    }(window.navigator.userAgent);
+ 
+    (function(a) {
+        var b, d = window.navigator.userAgent;
+        var getHref = window.location.href;
+        if (DeviceInfo.type == "mobile" && a.href.indexOf("from=mzp") < 0) {
+            b = "http://m.zhenpin.com/";
+            if(getHref.indexOf("product-") > 0 || getHref.indexOf("promotion2") > 0 || getHref.indexOf("promotion") > 0 || getHref.indexOf("special") > 0){ 
+            	var str = getHref.replace("www.zhen","m.zhenpin"); 
+            	b = str; 
+            }
+            if(getHref == "http://app.zhen.com/") b = "http://m.zhenpin.com/special/download.html";
+        }
+        b && (a.href = b)
+    })(window.location);
+</script>
+	
+	<script type="text/javascript" async="async" charset="utf-8" src="./foot_pic1_files/userinfo.php"></script><script type="text/javascript" async="async" charset="utf-8" src="./foot_pic1_files/zh_cn.js" data-requiremodule="lang"></script><script type="text/javascript" async="async" charset="utf-8" src="./foot_pic1_files/chat.in.js" data-requiremodule="chatManage"></script></head>
+	<body>
+	<div class="outerBox">
+	<!-- 首页顶通-->
+	<div class="ZP-topic" style="background:#d50100;">
+	<div class="topic-box" style="background:#d50100;">
+		<img alt="" src="./foot_pic1_files/160218190710795148g1m9w.jpg" style="width: 990px; height: 50px;"></div>
+</div>
+<style type="text/css">
+.ZP-topic .topic-box{width:990px;margin:0 auto;height:50px;}
+.topic-box a{display:block;width:990px; height:50px;}</style>	
+	<div class="Zp-download"><a href="http://app.zhen.com/" target="_blank"><img src="./foot_pic1_files/ewm.png"></a></div>
+	<input type="hidden" id="user_id" value="">
+		<div class="Zpg_headwrap">
+			<div class="Zpg_header">
+			    <div class="Zpg_headL">
+                	<strong><a href="http://app.zhen.com/" target="_blank">下载客户端新人专享满200减100</a></strong>
+                	<ul class="Zpg_headNav ZP-menu" id="ZP_category">
+    			        <li><a href="http://www.zhen.com/globalshop/" target="_blank">全球免税店</a></li>
+    	<li>
+		<a href="http://www.zhen.com/c3/">箱包</a>
+		<div class="Zpg_headNavC">
+		    		    			<ul class="firstul">
+				<li class="firstli">
+				   <a target="_blank" href="http://www.zhen.com/c33/" title="女士箱包">
+				       女士箱包			       </a>
+			    </li>
+			    				   <li><a target="_blank" href="http://www.zhen.com/c35/">手提包</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c393/">钱包</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c36/">单肩包</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c240/">卡/零钱/钥匙包</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c399/">手拿包</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c401/">旅行箱</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c400/">双肩背包</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c402/">化妆包</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c403/">数码包</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c404/">腰包</a></li>
+                			</ul>
+						<ul>
+				<li class="firstli">
+				   <a target="_blank" href="http://www.zhen.com/c34/" title="男士箱包">
+				       男士箱包			       </a>
+			    </li>
+			    				   <li><a target="_blank" href="http://www.zhen.com/c412/">钱包</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c410/">单肩包</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c409/">手提包</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c413/">手拿包</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c411/">卡/零钱/钥匙包</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c415/">旅行箱</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c414/">双肩背包</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c416/">数码包</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c417/">腰包</a></li>
+                			</ul>
+						<ul>
+				<li class="firstli">
+				   <a target="_blank" href="http://www.zhen.com/product/list.html" title="热门品牌">
+				       热门品牌			       </a>
+			    </li>
+			    				   <li><a target="_blank" href="http://www.zhen.com/burberry/baobao/">Burberry</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/coach/baobao/">Coach</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/salvatoreferragamo/baobao/">Salvatore Ferragamo</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/prada/baobao/">Prada</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/gucci/baobao/">Gucci</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/michealkors/baobao/">Michael Kors</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/bottegaveneta/baobao/">Bottega Veneta</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/bally/baobao/">Bally</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/delsey/baobao/">Delsey</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/moschino/baobao/">Moschino</a></li>
+                			</ul>
+						<ul>
+				<li class="firstli">
+				   <a target="_blank" href="./foot_pic1_files/foot_pic1.jpg" title="热门词">
+				       热门词			       </a>
+			    </li>
+			    				   <li><a target="_blank" href="http://www.zhen.com/promotion2/korean_bags_6164.html">韩星同款包袋</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/prada/baobao/">普拉达牛皮包袋</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c900/b16/">巴宝莉格纹包袋</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/playnomore/baobao/">大眼睛包包</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/mcm/baobao/">潮流双肩包</a></li>
+                			</ul>
+						<p>
+			    <a target="_blank" href="http://www.zhen.com/coach/baobao/">
+			        <img alt="" src="./foot_pic1_files/151023151226308881femtf.png">
+		        </a>
+		    </p>
+		</div>
+	</li>
+		<li>
+		<a href="http://www.zhenpin.com/c6/">配饰</a>
+		<div class="Zpg_headNavC">
+		    		    			<ul class="firstul">
+				<li class="firstli">
+				   <a target="_blank" href="http://www.zhen.com/c52/" title="女士配饰">
+				       女士配饰			       </a>
+			    </li>
+			    				   <li><a target="_blank" href="http://www.zhen.com/c90/">围巾</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c91/">项饰</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c93/">腕饰</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c88/">太阳镜</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c89/">丝巾</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c95/">耳饰</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c87/">腰带</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c92/">镜架</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c166/">文具</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c238/">钥匙扣</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c149/">戒指</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c152/">袜子</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c760/">帽子</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c236/">胸饰</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c761/">手套</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c825/">饰品套装</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c978/">手帕</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c154/">挂饰摆件</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c153/">手机套</a></li>
+                			</ul>
+						<ul>
+				<li class="firstli">
+				   <a target="_blank" href="http://www.zhen.com/c51/" title="男士配饰">
+				       男士配饰			       </a>
+			    </li>
+			    				   <li><a target="_blank" href="http://www.zhen.com/c53/">腰带</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c142/">围巾</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c138/">领带</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c148/">文具</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c139/">镜架</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c140/">钥匙扣</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c56/">太阳镜</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c144/">帽子</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c54/">腕饰</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c146/">手套</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c154/">挂饰摆件</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c143/">袜子</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c153/">手机套</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c141/">袖扣</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c1011/">手杖</a></li>
+                			</ul>
+						<ul>
+				<li class="firstli">
+				   <a target="_blank" href="http://www.zhen.com/c6/" title="热门品牌">
+				       热门品牌			       </a>
+			    </li>
+			    				   <li><a target="_blank" href="http://www.zhen.com/c6/b16/">Burberry</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/salvatoreferragamo/peishi/">Salvatore Ferragamo</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/gucci/peishi/">Gucci</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/prada/peishi/">Prada</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/swarovski/peishi/">Swarovski</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/alexandermcqueen/peishi/s3.html">Alexander McQueen</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/versace/peishi/">Versace</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/montblanc/peishi/">Montblanc</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c6/b143/">RAY-BAN</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c6/b91/">Bottega Veneta</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c6/b179/s2.html">Z Zegna</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c6/b22/">Dior</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c6/b40/">Hermès</a></li>
+                			</ul>
+						<ul>
+				<li class="firstli">
+				   <a target="_blank" href="http://www.zhen.com/c6/" title="热门词">
+				       热门词			       </a>
+			    </li>
+			    				   <li><a target="_blank" href="http://www.zhen.com/c53/">男士名品腰带</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c829/">羊绒围巾</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/bvlgari/peishi/">宝格丽</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/cartier/">卡地亚</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/vancleefarpels/peishi/">梵克雅宝</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/hermes/peishi/">爱马仕</a></li>
+                			</ul>
+						<p>
+			    <a target="_blank" href="http://www.zhen.com/c829/b16/">
+			        <img alt="" src="./foot_pic1_files/151218111139644788sd9rr.png">
+		        </a>
+		    </p>
+		</div>
+	</li>
+		<li>
+		<a href="http://www.zhenpin.com/c4/">服装</a>
+		<div class="Zpg_headNavC">
+		    		    			<ul class="firstul">
+				<li class="firstli">
+				   <a target="_blank" href="http://www.zhen.com/c40/" title="奢品男装">
+				       奢品男装			       </a>
+			    </li>
+			    				   <li><a target="_blank" href="http://www.zhen.com/c184/">棉服/羽绒服</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c65/">夹克</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c69/">大衣</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c66/">风衣</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c183/">针织衫/毛衫</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c42/">衬衫</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c73/">卫衣</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c70/">西装上衣</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c64/">T恤</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c1103/">皮衣/皮草</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c67/">牛仔裤</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c71/">西装套装</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c63/">POLO衫</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c68/">休闲裤</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c980/">运动套装</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c72/">西裤</a></li>
+                			</ul>
+						<ul>
+				<li class="firstli">
+				   <a target="_blank" href="http://www.zhen.com/c41/" title="奢品女装">
+				       奢品女装			       </a>
+			    </li>
+			    				   <li><a target="_blank" href="http://www.zhen.com/c228/">外套</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c933/">羽绒服</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c229/">针织衫/毛衫</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c211/">卫衣</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c226/">裙装</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c225/">裤装</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c223/">T恤</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c227/">衬衫</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c224/">POLO衫</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c212/">背心</a></li>
+                			</ul>
+						<ul>
+				<li class="firstli">
+				   <a target="_blank" href="./foot_pic1_files/foot_pic1.jpg" title="热门品牌">
+				       热门品牌			       </a>
+			    </li>
+			    				   <li><a target="_blank" href="http://www.zhen.com/burberry/nvzhuang/">Burberry</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/armanijeans/nvzhuang/">Armani Jeans</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/prada/nvzhuang/">Prada</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/ea7/nvzhuang/">EA7</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c40/b403/">Maurizio Baldassari</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c40/b494/">Modesto Bertotto</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/emporioarmani/nvzhuang/">Emporio Armani</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/zzegna/nvzhuang/">Z Zegna</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/ermenegildozegna/nvzhuang/">Ermenegildo Zegna</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/moncler/nvzhuang/">Moncler</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/versacecollection/nvzhuang/">Versace Collection</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c40/b76/">Givenchy</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/diesel/nvzhuang/">Diesel</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/hugoboss/nvzhuang/">hugoboss</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c40/b93/">Dolce &amp; Gabbana</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/mcqalexandermcqueen/nvzhuang/">MCQ</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/kenzo/shangyi/">kenzo</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/roen/nvzhuang/">ROEN</a></li>
+                			</ul>
+						<ul>
+				<li class="firstli">
+				   <a target="_blank" href="./foot_pic1_files/foot_pic1.jpg" title="热门词">
+				       热门词			       </a>
+			    </li>
+			    				   <li><a target="_blank" href="http://www.zhen.com/c42/b16/d001.html">巴宝莉 大格纹衬衫</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c4/b167/d001-s2.html">Moncler 羽绒王者</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c65/d001-s2.html">秋冬新品夹克</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c68/b14/d001.html">普拉达 精致剪裁男裤</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c226/s2.html">奢华女裙 女神必备</a></li>
+                			</ul>
+						<p>
+			    <a target="_blank" href="http://www.zhen.com/c4/b16/d001-s2.html">
+			        <img alt="" src="./foot_pic1_files/160222112932015369jbo1b.jpg">
+		        </a>
+		    </p>
+		</div>
+	</li>
+		<li>
+		<a href="http://www.zhen.com/c7/">鞋靴</a>
+		<div class="Zpg_headNavC">
+		    		    			<ul class="firstul">
+				<li class="firstli">
+				   <a target="_blank" href="http://www.zhen.com/c367/" title="女士鞋靴">
+				       女士鞋靴			       </a>
+			    </li>
+			    				   <li><a target="_blank" href="http://www.zhen.com/c975/">休闲鞋</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c1029/">雪地靴</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c1022/">乐福鞋</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c1027/">及踝靴</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c968/">单鞋</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c375/">高筒靴</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c373/">高跟鞋</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c1015/">休闲运动鞋</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c1030/">坡跟鞋</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c1032/">拖鞋</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c374/">凉鞋</a></li>
+                			</ul>
+						<ul>
+				<li class="firstli">
+				   <a target="_blank" href="http://www.zhen.com/c366/" title="男士鞋靴">
+				       男士鞋靴			       </a>
+			    </li>
+			    				   <li><a target="_blank" href="http://www.zhen.com/c369/">休闲运动鞋</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c1024/">乐福鞋</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c1025/">板鞋</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c368/">休闲鞋</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c750/">高筒靴</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c370/">商务正装鞋</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c1031/">拖鞋</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c1028/">雪地靴</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c1026/">及踝靴</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c371/">凉鞋</a></li>
+                			</ul>
+						<ul>
+				<li class="firstli">
+				   <a target="_blank" href="./foot_pic1_files/foot_pic1.jpg" title="热门品牌">
+				       热门品牌			       </a>
+			    </li>
+			    				   <li><a target="_blank" href="http://www.zhen.com/prada/xiezi/">Prada</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/tods/xiezi/">TOD'S</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/salvatoreferragamo/xiezi/">Salvatore Ferragamo</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/bally/xiezi/">Bally</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c7/b13/">Gucci</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c367/b606/">GML</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c7/b495/">Jumbougg</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/giuseppezanotti/">Giuseppe Zanotti</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c7/b34/">Kenzo</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c366/b77/">S.T.Dupont</a></li>
+                			</ul>
+						<ul>
+				<li class="firstli">
+				   <a target="_blank" href="./foot_pic1_files/foot_pic1.jpg" title="热门词">
+				       热门词			       </a>
+			    </li>
+			    				   <li><a target="_blank" href="http://www.zhen.com/c367/s2.html">新品女鞋</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/c368/">休闲鞋</a></li>
+                				   <li><a target="_blank" href="http://www.zhen.com/tods/xiezi/">豆豆鞋</a></li>
+                			</ul>
+						<p>
+			    <a target="_blank" href="http://www.zhen.com/prada/xiezi/">
+			        <img alt="" src="./foot_pic1_files/151221090406169594gexg6.png">
+		        </a>
+		    </p>
+		</div>
+	</li>
+		<li><a href="http://www.zhen.com/p_new-1/" target="_blank">新品</a></li>
+	<!-- <li><a href="http://www.zhen.com/temai/" target="_blank">特卖</a></li> -->
+	<li><a href="http://www.zhen.com/brand/list.html" target="_blank">品牌</a></li>
+    				</ul>
+                </div>
+				<div class="Zpg_logo"><a target="_blank" href="./foot_pic1_files/foot_pic1.jpg">珍品</a></div>
+				<div class="Zpg_headR">
+					<ul id="loginNode">
+						<li class="gwd"><a target="_blank" href="http://trade.zhen.com/index.php?c=newcart">购物袋<strong>0</strong></a></li>
+					<li><a href="http://passport.zhen.com/login.html?returnUrl=http://www.zhen.com/" rel="nofollow" target="_blank">登录</a>|</li><li><a href="http://passport.zhen.com/reg.html?returnUrl=http://www.zhen.com/" rel="nofollow" target="_blank">注册</a>|</li></ul>
+					<div class="Zpg_searchBox"> 
+                    <form id="form-search" action="http://www.zhen.com/search?" method="get"> 
+                        <input type="submit" class="Zpg_searchBtn" value=""> 
+                        <input id="s-keyword" type="text" name="keyword" class="Zpg_searchText" onfocus="if(this.value!=&#39;搜索关键词&#39;){this.style.color=&#39;#404040&#39;;this.select();}else{this.value=&#39;&#39;;this.style.color=&#39;#404040&#39;}" onkeydown="this.style.color=&#39;#404040&#39;" value="搜索关键词" autocomplete="off"> 
+                    </form>
+                    <ul class="shelper" style="display:none;"></ul>
+                    </div>
+				</div>
+			</div>
+		</div>
+      <!--头部结束-->
+      
+ 	<!--首页开始-->
+<!-- 首页轮播图-->
+<div class="banner">
+<div class="ZP-focus" style="width: 1423px;">
+		<ul class="ZP-focus-img" style="width: 1672px;">
+				<li style="position: absolute; z-index: 3;"><a href="http://app.zhen.com/" target="_blank" id="__AD_jiaodian1a"><img src="./foot_pic1_files/160317165021962348vgo1g.jpg" alt="" style="margin-left: -248.5px;"></a></li>
+			</ul>
+	<div class="ZP-focus-btn" style="right: 711.5px;">
+				 
+			</div>
+	</div></div>
+<div id="firstScreen" style="display:none;"></div>
+<!-- 品牌区-->
+<div class="Zpg_Brand" style="height: 264px;">
+	<ul>
+		<li>
+			<a href="http://www.zhen.com/armanijeans/" target="_blank"><img data-lazyload="http://zhenimg.com/product/2015/05/armani.jpg" src="./foot_pic1_files/armani.jpg" style="display: block;"></a></li>
+		<li>
+			<a href="http://www.zhen.com/bally/" target="_blank"><img data-lazyload="http://zhenimg.com/product/2015/05/bally.jpg" src="./foot_pic1_files/bally.jpg" style="display: block;"></a></li>
+		<li>
+			<a href="http://www.zhen.com/bottegaveneta/" target="_blank"><img data-lazyload="http://zhenimg.com/product/2015/05/bottega-veneta.jpg" src="./foot_pic1_files/bottega-veneta.jpg" style="display: block;"></a></li>
+		<li>
+			<a href="http://www.zhen.com/zzegna/" target="_blank"><img data-lazyload="http://zhenimg.com/product/2015/05/z-zegna.jpg" src="./foot_pic1_files/z-zegna.jpg" style="display: block;"></a></li>
+		<li>
+			<a href="http://www.zhen.com/burberry/" target="_blank"><img data-lazyload="http://zhenimg.com/product/2015/05/burberry.jpg" src="./foot_pic1_files/burberry.jpg" style="display: block;"></a></li>
+		<li>
+			<a href="http://www.zhen.com/coach/" target="_blank"><img data-lazyload="http://zhenimg.com/product/2015/05/coach.jpg" src="./foot_pic1_files/coach.jpg" style="display: block;"></a></li>
+		<li>
+			<a href="http://www.zhen.com/dior/" target="_blank"><img data-lazyload="http://zhenimg.com/product/2015/05/dior.jpg" src="./foot_pic1_files/dior.jpg" style="display: block;"></a></li>
+		<li>
+			<a href="http://www.zhen.com/dolcegabbana/" target="_blank"><img data-lazyload="http://zhenimg.com/product/2015/05/dolce-gabbana.jpg" src="./foot_pic1_files/dolce-gabbana.jpg" style="display: block;"></a></li>
+		<li>
+			<a href="http://www.zhen.com/fendi/" target="_blank"><img data-lazyload="http://zhenimg.com/product/2015/05/fendi.jpg" src="./foot_pic1_files/fendi.jpg" style="display: block;"></a></li>
+		<li>
+			<a href="http://www.zhen.com/furla/" target="_blank"><img data-lazyload="http://zhenimg.com/product/2015/05/furla.jpg" src="./foot_pic1_files/furla.jpg" style="display: block;"></a></li>
+		<li>
+			<a href="http://www.zhen.com/gucci/" target="_blank"><img data-lazyload="http://zhenimg.com/product/2015/05/gucci.jpg" src="./foot_pic1_files/gucci.jpg" style="display: block;"></a></li>
+		<li>
+			<a href="http://www.zhen.com/michealkors/" target="_blank"><img data-lazyload="http://zhenimg.com/product/2015/05/michel-kors.jpg" src="./foot_pic1_files/michel-kors.jpg" style="display: block;"></a></li>
+		<li>
+			<a href="http://www.zhen.com/montblanc/" target="_blank"><img data-lazyload="http://zhenimg.com/product/2015/05/montblanc.jpg" src="./foot_pic1_files/montblanc.jpg" style="display: block;"></a></li>
+		<li>
+			<a href="http://www.zhen.com/prada/" target="_blank"><img data-lazyload="http://zhenimg.com/product/2015/05/prada.jpg" src="./foot_pic1_files/prada.jpg" style="display: block;"></a></li>
+		<li>
+			<a href="http://www.zhen.com/rayban/" target="_blank"><img data-lazyload="http://zhenimg.com/product/2015/05/ray-ban.jpg" src="./foot_pic1_files/ray-ban.jpg" style="display: block;"></a></li>
+		<li>
+			<a href="http://www.zhen.com/salvatoreferragamo/" target="_blank"><img data-lazyload="http://zhenimg.com/product/2015/05/salvatore-ferragamo.jpg" src="./foot_pic1_files/salvatore-ferragamo.jpg" style="display: block;"></a></li>
+		<li>
+			<a href="http://www.zhen.com/swarovski/" target="_blank"><img data-lazyload="http://zhenimg.com/product/2015/05/swarovski.jpg" src="./foot_pic1_files/swarovski.jpg" style="display: block;"></a></li>
+		<li>
+			<a href="http://www.zhen.com/brand/list.html" target="_blank"><img data-lazyload="http://zhenimg.com/product/2015/05/all-brand.jpg" src="./foot_pic1_files/all-brand.jpg" style="display: block;"></a></li>
+	</ul>
+</div>
+<!-- 品牌区下方广告-->
+<ul class="Zpg_assort">
+	<li class="mar">
+		<a href="http://www.zhen.com/salvatoreferragamo/baobao/" target="_blank"><img data-lazyload="http://zhenimg.com/product/2016/02/160201091025746486u6ggz.jpg" style="width: 590px; height: 245px; display: block;" src="./foot_pic1_files/160201091025746486u6ggz.jpg"></a></li>
+	<li>
+		<a href="http://www.zhen.com/swarovski/"><img data-lazyload="http://zhenimg.com/product/2016/02/160201091043019949f4uc3.jpg" style="width: 590px; height: 245px; display: block;" src="./foot_pic1_files/160201091043019949f4uc3.jpg"></a></li>
+	<li class="mar">
+		<a href="http://www.zhen.com/promotion2/new_clothes_5709.html" target="_blank"><img data-lazyload="http://zhenimg.com/product/2016/02/160222114744273074y4f39.JPG" style="width: 590px; height: 500px; display: block;" src="./foot_pic1_files/160222114744273074y4f39.JPG"></a></li>
+	<li>
+		<a href="http://www.zhen.com/salvatoreferragamo/xiezi/" target="_blank"><img data-lazyload="http://zhenimg.com/product/2016/02/160201091741408921es33h.jpg" style="width: 590px; height: 245px; display: block;" src="./foot_pic1_files/160201091741408921es33h.jpg"></a></li>
+	<li>
+		<a href="http://www.zhen.com/promotion2/spring_sjt_6846.html"><img data-lazyload="http://zhenimg.com/product/2016/02/16020109550846089638fbp.jpg" style="width: 590px; height: 245px; display: block;" src="./foot_pic1_files/16020109550846089638fbp.jpg"></a></li>
+</ul>
+<div style="width:1190px;margin:0 auto;">
+	声明：珍品网不会以电话、短信等任何形式要求顾客退款、转账或提供密码等隐私信息，如遇此类问题，请及时致电官方唯一客服电话：400-009-6666，或联系珍品时尚顾问咨询核实，请务必提高警惕，避免上当受骗！</div><script> /*焦点图同步*/ 
+	new imgAdapt(".ZP-focus",".ZP-focus-img img",".ZP-focus-btn",".ZP_gong"); 
+</script>
+<!-- 在线客服 -->
+<script type="text/javascript" src="./foot_pic1_files/ntkfstat.js"></script>
+<!-- 百分点 -->
+﻿<script type="text/javascript">
+	window["_BFD"] = window["_BFD"] || {};
+	_BFD.BFD_INFO = {
+		"user_id" : "0", //网站当前用户id，如果未登录就为0或空字符串
+		"page_type" : "homepage" //当前页面全称，请勿修改
+	};
+</script>
+<!-- 百分点 -->
+
+<!--  CRITEO Home page tag ---->
+<script type="text/javascript" src="./foot_pic1_files/ld.js" async="true"></script>
+<script type="text/javascript">
+window.criteo_q = window.criteo_q || [];
+window.criteo_q.push(
+        { event: "setAccount", account: 17892 },
+        { event: "setSiteType", type: "d" },
+        { event: "viewHome" }
+);
+</script>
+  	<!--底部开始-->
+     
+      <div class="Zpg_footwrap">
+			<div class="Zpg_footer">
+				<div class="Zpg_footL">
+					<div class="Zpg_bing">
+						<a class="link1">100%正品保证</a>
+						<a class="link2">比香港更便宜</a>
+						<a class="link3">现货发货</a>
+					</div>
+					<ul>
+						<li>
+							<strong>新手指导</strong>
+							<a target="_blank" href="http://www.zhen.com/help-2.html">常见问题</a>
+							<a target="_blank" href="http://www.zhen.com/help-24.html">联系客服</a>
+							<a target="_blank" href="http://www.zhen.com/zhenpin_tour/">正品保障</a>
+							<a target="_blank" href="http://www.zhen.com/help-48.html">全球免税店</a>
+						</li>
+						<li>
+							<strong>会员服务</strong>
+							<a target="_blank" href="http://www.zhen.com/help-35.html">会员说明</a>
+							<a target="_blank" href="http://www.zhen.com/help-6.html#balance">余额说明</a>
+							<a target="_blank" href="http://www.zhen.com/help-5.html#jifen_say">积分说明</a>
+							<a target="_blank" href="http://www.zhen.com/help-39.html#coupon">优惠说明</a>
+						</li>
+						<li>
+							<strong>支付方式</strong>
+							<a target="_blank" href="http://www.zhen.com/help-32.html#online_pay">在线支付</a>
+							<a target="_blank" href="http://www.zhen.com/help-36.html">分期付款</a>
+						</li>
+						<li>
+							<strong>配送说明</strong>
+							<a target="_blank" href="http://www.zhen.com/help-12.html#shippingarea">配送范围</a>
+							<a target="_blank" href="http://www.zhen.com/help-12.html#shippingarea">配送时间</a>
+						</li>
+						<li>
+							<strong>售后服务</strong>
+							<a target="_blank" href="http://www.zhen.com/help-47.html">保养护理说明</a>
+							<a target="_blank" href="http://www.zhen.com/help-14.html#refundment">退款说明</a>
+							<a target="_blank" href="http://www.zhen.com/help-13.html">退换货流程</a>
+						</li>
+					</ul>
+				</div>
+				<div class="Zpg_footR">
+					<div class="Zpg_fgzwm">
+						<strong>关注我们</strong>
+						<a target="_blank" href="http://app.zhen.com/" class="app">下载APP<br>首单满200减100</a>
+						<em></em>
+						<p><img data-lazyload="http://zhenimg.com/marketpic/zpgindexImg/zpg_wximg.jpg" src="./foot_pic1_files/zpg_wximg.jpg" style="display: inline;"></p>
+					</div>
+					<div class="Zpg_flxwm">
+						<strong>联系我们</strong>
+						<a href="javascript:void(0)" class="kf" onclick="openChat(&#39;kf_9999_1375345250884&#39;);">在线客服</a>
+						<em></em>
+						<p><img data-lazyload="http://zhenimg.com/marketpic/zpgindexImg/zpg_time.jpg" src="./foot_pic1_files/zpg_time.jpg" style="display: inline;"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="Zpg_copyright">
+			<div class="help_word"><a rel="nofollow" target="_blank" href="http://www.zhen.com/company/">企业客户</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://www.zhen.com/help-15.html">关于我们</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://www.zhen.com/help-16.html">联系我们</a>&nbsp;|&nbsp;<a rel="nofollow" target="_blank" href="http://www.zhen.com/help-17.html">人才招聘</a>&nbsp;|&nbsp;<a target="_blank" href="http://www.zhen.com/help-21.html">合作伙伴</a></div>
+			<p>京ICP证110290号 | 京ICP备11014626号-5 | 京公网安备11010502025723号 | 食品流通许可证SP1101121310106363(1-1) | 出版物经营许可证 新出发京批字第直130121号</p>
+		</div>
+      <!--底部结束-->
+<!-- 广告统计 -->
+</div>
+<div style="display:none;">
+<script type="text/javascript"> 
+  var _adwq = _adwq || []; 
+  _adwq.push(['_setAccount', 'v1gmg']); 
+  _adwq.push(['_setDomainName', '.zhenpin.com']); 
+  _adwq.push(['_trackPageview']); 
+</script> 
+<script type="text/javascript" src="./foot_pic1_files/adw.js"></script> 
+
+<!-- vizury 2.0 start -->
+<script type="text/javascript">
+(function() {
+    try {
+        var viz = document.createElement("script");
+        viz.type = "text/javascript";
+        viz.async = true;
+        viz.src = ("https:" == document.location.protocol ?"https://cn-tags.vizury.com" : "http://cn-tags.vizury.com")+ "/analyze/pixel.php?account_id=VIZVRM728";
+
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(viz, s);
+        viz.onload = function() {
+            try {
+                pixel.parse();
+            } catch (i) {
+            }
+        };
+        viz.onreadystatechange = function() {
+            if (viz.readyState == "complete" || viz.readyState == "loaded") {
+                try {
+                    pixel.parse();
+                } catch (i) {
+                }
+            }
+        };
+    } catch (i) {
+    }
+})();
+</script>
+ <!--vizury 2.0 end -->
+
+<!-- 谷歌分析代码 -->
+<script> 
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ 
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), 
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) 
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga'); 
+
+ga('create', 'UA-24877853-1', 'auto'); 
+ga('send', 'pageview'); 
+
+</script>
+
+
+<!-- 百度统计代码  -->
+<script> 
+var _hmt = _hmt || []; 
+(function() { 
+var hm = document.createElement("script"); 
+hm.src = "//hm.baidu.com/hm.js?8d8a2e4d12ea2bff95ba954f69e195e7"; 
+var s = document.getElementsByTagName("script")[0]; 
+s.parentNode.insertBefore(hm, s); 
+})(); 
+</script> 
+
+<!-- Cnzz统计代码 -->
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_3772926'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s96.cnzz.com/stat.php%3Fid%3D3772926' type='text/javascript'%3E%3C/script%3E"));</script><span id="cnzz_stat_icon_3772926"><a href="http://www.cnzz.com/stat/website.php?web_id=3772926" target="_blank" title="站长统计">站长统计</a></span><script src="./foot_pic1_files/stat.php" type="text/javascript"></script><script src="./foot_pic1_files/core.php" charset="utf-8" type="text/javascript"></script> 
+
+<!--  99Click统计代码     -->
+<script type="text/javascript">
+var  _ozuid='';
+</script>
+<script language="JavaScript" src="./foot_pic1_files/o_code.js"></script>
+
+<!-- start 广点通代码 -->
+<script type="text/javascript" src="./foot_pic1_files/gdt.php" charset="UTF-8"></script>
+<!-- end 广点通代码 -->	
+
+<!-- start 360点睛 -->
+<script type="text/javascript" src="./foot_pic1_files/c.js"></script>
+<!-- end 360点睛 -->
+
+</div><iframe src="./foot_pic1_files/_cm.html" id="emar_box_pv" style="width: 1px; border: 0px; position: absolute; left: -100px; top: -100px; height: 1px;"></iframe><div id="criteo-tags-div" style="display: none;"><iframe height="0" width="0" src="./foot_pic1_files/dis.html" style="display: none;"></iframe></div></body></html>

@@ -1,0 +1,168 @@
+		html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; }
+
+		fieldset, img { border:none; }
+
+		img{display: block;}
+
+		address, caption, cite, code, dfn, th, var { font-style:normal; font-weight:normal; }
+
+		ul, ol { list-style:none; } 
+		body { color:#333;font:12px/20px "SimSun","宋体","Arial Narrow",HELVETICA; background:#fff;/* overflow-y:scroll;*/ overflow-x:hidden;}
+
+		a {color:#666; text-decoration:none;}
+/*--------------------header-------------------------*/
+.outerHeader{
+	width: 100%;
+	height: 100px;
+}
+.header{
+	width: 990px;
+	height: 70px;
+	padding-top: 30px;
+	margin: 0 auto;
+	
+}
+.headerLeft,.headerRight{
+	float: left;
+}
+.headerLeft{
+	margin-right: 395px;
+}
+.zhegea{
+	text-align: center;
+	display: block;
+	width:80px;
+	height: 50px;
+	text-decoration: none;
+}
+.zhegea span{
+	font-size: 30px;
+	font-family: "黑体";
+	color: red;
+}
+.zhege p{
+	font-family: "微软雅黑";
+	color: red;
+}
+.headerRight li{
+	float: left;
+	margin-right: 20px;
+}
+/*=========================main==============================*/
+.outerMain{
+	width: 100%;
+	height: 632px;
+	background: #F3F3F3;
+	padding-top: 50px;
+}
+.main{
+	width: 990px;
+	height: 532px;
+	margin: 0 auto;
+	background: white;
+}
+.top{
+	width: 970px;
+	height: 33px;
+	border-bottom: 1px solid silver;
+	margin: 0 auto;
+	padding-top: 24px;
+}
+.top1{
+	font-size: 16px;
+}
+.top3{
+	display: inline-block;
+	margin-left: 600px;
+}
+.top2,.top4{
+	color: red;
+}
+.info{
+	width: 970px;
+	height: 390px;
+	margin: 0 auto;
+	
+	padding-top: 50px;
+}
+#myform{
+	width: 680px;
+	height: 369px;
+
+	float: left;
+}
+#myform label{
+	display: inline-block;
+	width: 115px;
+	height: 40px;
+	text-align: right;
+	font-size: 16px;
+}
+#email,#password,#confirm_password{
+	width: 256px;
+	height: 40px;
+	
+}
+#checkCode{
+	width: 100px;
+	height: 40px;
+}
+#checkCodePic{
+	width: 100px;
+	height: 50px;
+	display: inline-block;
+	width: 60px;
+	height: 40px;
+	margin-left: 120px;
+	font-size: 15px;
+	line-height: 40px;
+	text-align: center;
+	color: red;
+	background: url(../img/active/app_bj.jpg);
+}
+#checkBox{
+	width: 300px;
+	text-align: center;
+	margin-left: 60px;
+}
+#regsiter{
+	color: white;
+	display: block;
+	width: 270px;
+	height: 34px;
+	font-size: 15px;
+	text-align: center;
+	line-height: 34px;
+	margin-left: 100px;
+	margin-top: 20px;
+	background: #CE0000;
+}
+.infoRight{
+	width: 290px;
+	height: 369px;
+	float: left;
+}
+
+
+
+
+/*=================================bottom===================*/
+.outerBottom{
+	width: 100%;
+	height: 80px;
+	background: white;
+}
+.outerBottom a{
+	font-size: 12px;
+	text-decoration:none;
+	color: gray;
+}
+.bottom{
+	width: 1190px;
+	height: 70px;
+	padding: 10px;
+	margin: 0 auto;
+}
+.bottom div{
+	text-align: center;
+}
