@@ -60,7 +60,7 @@
 				//获取第一排的logo
 				$.getJSON("js/indexJson/logo.json",function(data){
 				$.each(data.logoName, function(index,val) {
-					var msg="<li style='float:left;'><a href='#'><img src="+val.href+"/></a></li>"
+					var msg="<li style='float:left;'><a href='#'><img src="+val.href+"></a></li>"
 					$(".logo").append(msg)
 				});
 			})
@@ -70,7 +70,7 @@
 					for (var i=0;i<2;i++) {
 						$.getJSON("js/indexJson/logo.json",function(data){
 							$.each(data.logoName, function(index,val) {
-							var msg="<li style='float:left;'><a href='#'><img src="+val.href+"/></a></li>"
+							var msg="<li style='float:left;'><a href='#'><img src="+val.href+"></a></li>"
 							$(".logoHide").append(msg)
 									});
 					})
