@@ -1,2 +1,3 @@
-# whocare
-简单的实现电商网站
+# zhen-website
+- 纯静态
+- 电商网站
